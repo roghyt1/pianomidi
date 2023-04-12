@@ -1,41 +1,103 @@
-/* Styles pour le header */
-header {
-	background-color: #333;
-	color: #fff;
-	padding: 10px;
+/* Style pour la page principale */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header h1 {
-	margin: 0;
-	font-size: 32px;
+h1 {
+  margin-top: 40px;
+  text-align: center;
 }
 
-/* Styles pour le formulaire */
-form {
-	margin: 20px;
+#upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
-label {
-	display: block;
-	font-size: 24px;
-	margin-bottom: 10px;
+#upload p {
+  margin-bottom: 20px;
 }
 
-input[type="file"] {
-	font-size: 20px;
+#file-input {
+  margin-bottom: 20px;
 }
 
-input[type="submit"] {
-	margin-top: 10px;
-	font-size: 24px;
-	padding: 10px 20px;
-	background-color: #333;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+#upload-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 8px;
 }
 
-input[type="submit"]:hover {
-	background-color: #666;
+#upload-button:hover {
+  background-color: #3e8e41;
 }
+
+/* Style pour le clavier de piano */
+#piano-container {
+  display: none;
+  margin: 20px auto;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+#piano {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.key {
+  cursor: pointer;
+  height: 80px;
+  position: absolute;
+  transform-origin: bottom;
+  width: 12%;
+}
+
+.white {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.white.pressed {
+  background-color: #ddd;
+  border: 1px solid gray;
+}
+
+.black {
+  background-color: black;
+  border: 1px solid black;
+  height: 50px;
+  margin-left: -3.5%;
+  transform: translateX(50%);
+  width: 8%;
+}
+
+.black.pressed {
+  background-color: #333;
+  border: 1px solid gray;
+}
+
+/* Style pour l'affichage des notes */
+#note-display {
+  background-color: #ddd;
+  border: 1px solid black;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 10px;
+  text-align: center;
+}
+
