@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-	<title>Piano Virtuel - Télécharger une partition MIDI</title>
-	<link rel="stylesheet" type="text/css" href="/main.css">
-</head>
-<body>
-	<header>
-		<h1>Piano Virtuel - Télécharger une partition MIDI</h1>
-	</header>
-	<main>
-		<form action="#" method="post" enctype="multipart/form-data">
-			<label for="midi-file">Choisissez un fichier MIDI à télécharger :</label>
-			<input type="file" id="midi-file" name="midi-file" accept=".mid">
-			<input type="submit" value="Télécharger">
-		</form>
-	</main>
-	<footer>
-		<p>&copy; 2023 Piano Virtuel. Tous droits réservés.</p>
-	</footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Piano App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="upload">
+      <h1>Piano App</h1>
+      <p>Téléchargez votre fichier MIDI:</p>
+      <form id="file-upload">
+        <input type="file" id="file-input" accept=".mid,.midi">
+        <button type="submit" id="upload-button">Télécharger</button>
+      </form>
+    </div>
+
+    <div id="piano-container">
+      <canvas id="piano"></canvas>
+      <div id="note-display"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
